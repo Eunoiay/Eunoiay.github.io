@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://eunoiay.github.io/images/avatar.jpg">
 <meta property="article:published_time" content="2024-06-18T18:02:05.291Z">
-<meta property="article:modified_time" content="2024-06-19T05:42:48.088Z">
+<meta property="article:modified_time" content="2024-06-19T05:59:06.116Z">
 <meta property="article:author" content="Eunoiay">
 <meta property="article:tag" content="构造">
 <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
   isHome: false,
   isHighlightShrink: true,
   isToc: true,
-  postUpdate: '2024-06-19 13:42:48'
+  postUpdate: '2024-06-19 13:59:06'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -164,14 +164,14 @@
 <details class="toggle" ><summary class="toggle-button" style="">Hint 1：如何计算 $V_p$ 的下限和上限？</summary><div class="toggle-content"><p>显然，$p = [1,2,\dots,n]$ 时，$V_p = 0$ 取到最小值；$p = [n,n - 1,\dots,1]$ 时，$V_p$ 取到最大值。</p>
 </div></details>
 <details class="toggle" ><summary class="toggle-button" style="">Hint 2：$V_p$ 可以是奇数吗？</summary><div class="toggle-content"><p>假设 $p_i = x$，$p_j = y$，则它们对 $V_p$ 的贡献 $w = \lvert x - i \rvert + \lvert y - j \rvert$，  </p>
-<p>$\operatorname{swap}(p_i,\ p_j)$ 后，$w = \lvert x - j \rvert + \lvert y - i \rvert$，$w$ 的奇偶性不变，因此 $V_p$ 只能是偶数</p>
+<p>$\operatorname{swap}(p_i,p_j)$ 后，$w = \lvert x - j \rvert + \lvert y - i \rvert$，$w$ 的奇偶性不变，因此 $V_p$ 只能是偶数</p>
 </div></details>
 <p>容易想到一定存在排列 $p$，使 $k$ 可以取到 $0\sim k_{max}$ 范围内的任意偶数值。</p>
 <p>那么，应该如何构造排列 $p$ 呢？</p>
-<details class="toggle" ><summary class="toggle-button" style="">构造方法</summary><div class="toggle-content"><p>假设 $p = [1,2,\dots, n]$，若 $\operatorname{swap}(1,\ x)$，将会得到 $2\cdot \lvert 1 - x\rvert$ 的贡献。</p>
+<details class="toggle" ><summary class="toggle-button" style="">构造方法</summary><div class="toggle-content"><p>假设 $p = [1,2,\dots, n]$，若 $\operatorname{swap}(1,x)$，将会得到 $2\cdot \lvert 1 - x\rvert$ 的贡献。</p>
 <p>也就是说，$x\in [1,n]$ 时，可以得到 $0\sim 2\cdot (n - 1)$ 范围内的任意偶数值。</p>
-<p>若 $k &gt; 2\cdot(n - 1)$，$\operatorname{swap}(1,\ n)$ 后，$1$ 和 $n$ 已经被固定，问题缩小至 $n - 2$ 的子问题。</p>
-<p>同理，若 $\operatorname{swap}(2,\ y),\ y\in [2,\ n - 1]$，可以得到 $0\sim 2\cdot (n - 3)$ 范围内的偶数值。</p>
+<p>若 $k &gt; 2\cdot(n - 1)$，$\operatorname{swap}(1,n)$ 后，$1$ 和 $n$ 已经被固定，问题缩小至 $n - 2$ 的子问题。</p>
+<p>同理，若 $\operatorname{swap}(2,y),\ y\in [2,\ n - 1]$，可以得到 $0\sim 2\cdot (n - 3)$ 范围内的偶数值。</p>
 <p>根据数学归纳法，我们可以得到 $0\sim 2\cdot (n - 1) + 2\cdot (n - 3)$ 范围内的任意偶数…</p>
 <p>以此类推，最终有 $p = [n,\ n - 1,\dots,1]$，并且可以证明，任意 $k\in [0,k_{max}]$ 都可以被构造出来</p>
 </div></details>
